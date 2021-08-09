@@ -1,12 +1,12 @@
 @startuml banks
-class banks {
+entity banks {
   + ID [PK]
   --
   name
   name_branch
   type
   number
-  created_at
-  updated_at
+  created_at : TIMESTAMP
+  updated_at : TIMESTAMP
 }
 @enduml

@@ -1,13 +1,16 @@
 @startuml tables
 !include users.pu
+!include shoes.pu
 !include banks.pu
 !include creditcards.pu
+!include shoes_deposit.pu
+!include shoes_return.pu
 !include shoes_purchase.pu
 
-companies ||-d-o{ users
-companies ||-o{ positions
-users ||-l-o| user_profiles
-users ||-d-o{ user_subordinate_users
-users ||-o{ user_positions
-positions ||-o{ user_positions
+users ||-r-o{ creditcards
+users ||-l-o{ banks
+users ||-d-o{ shoes
+shoes ||-l-o{ shoes_deposit
+shoes ||-r-o{ shoes_return
+shoes ||-d-o{ shoes_purchase
 @enduml

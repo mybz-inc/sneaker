@@ -1,23 +1,24 @@
 @startuml users
-class users {
+entity users {
   + ID [PK]
   --
-  name
-  name_ruby
-  email
-  phone_number
-  birthday
-  password
-  balance
-  shoes_id
-  bank_id
-  creditcard_id
-  plan_id
-  stripe_user_id
-  sms_user_id
-  status
-  status_code
-  created_at
-  updated_at
+  name : TEXT()
+  name_ruby : TEXT()
+  email : VARCHAR(191)
+  phone_number : VARCHAR()
+  birthday : DATE
+  password : VARCHAR(50)
+  balance : INTEGER
+  status : BOOLEAN
+  status_code : CHAR(20)
+  created_at : TIMESTAMP
+  updated_at : TIMESTAMP
+  --
+  shoes_id [FK]
+  bank_id [FK]
+  creditcard_id [FK]
+  plan_id [FK]
+  stripe_user_id [FK]
+  sms_user_id [FK]
 }
 @enduml

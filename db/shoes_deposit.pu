@@ -1,8 +1,7 @@
-@startuml shoes_purchase
-entity shoes_purchase {
+@startuml shoes_deposit
+entity shoes_deposit {
   + ID [PK]
   --
-  purchase_price : INTEGER
   status : BOOLEAN
   status_code : CHAR(20)
   created_at : TIMESTAMP

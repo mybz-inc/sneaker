@@ -1,22 +1,23 @@
 @startuml shoes
-class shoes {
+entity shoes {
   + ID [PK]
   --
   name
-  image_url
+  image_url_xx
   maker
-  status
   accessories
   remark
-  serial_number
-  storage_id
-  shoes_deposit_id
-  shoes_return_id
-  shoes_purchase_id
-  valuation_id
-  status
-  status_code
-  created_at
-  updated_at
+  serial_number : VARCHAR(50)
+  status : BOOLEAN
+  status_code : CHAR(20)
+  created_at : TIMESTAMP
+  updated_at : TIMESTAMP
+  --
+  + user_id [FK]
+  + storage_id [FK]
+  + shoes_deposit_id [FK]
+  + shoes_return_id [FK]
+  + shoes_purchase_id [FK]
+  + valuation_id [FK]
 }
 @enduml
