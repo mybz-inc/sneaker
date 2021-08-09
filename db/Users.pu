@@ -1,4 +1,5 @@
-class Users {
+@startuml users
+class users {
   + ID [PK]
   --
   name
@@ -19,3 +20,4 @@ class Users {
   created_at
   updated_at
 }
+@enduml

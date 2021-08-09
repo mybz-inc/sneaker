@@ -1,4 +1,5 @@
-class CreditCards {
+@startuml creditcards
+class creditcards {
   + ID [PK]
   --
   brand
@@ -9,3 +10,4 @@ class CreditCards {
   created_at
   updated_at
 }
+@enduml

@@ -1,4 +1,5 @@
-class Shoes {
+@startuml shoes
+class shoes {
   + ID [PK]
   --
   name
@@ -9,14 +10,13 @@ class Shoes {
   remark
   serial_number
   storage_id
-  deposit_request_at
-  deposit_approval_at
-  return_request_at
-  return_approval_at
-  deal_id
+  shoes_deposit_id
+  shoes_return_id
+  shoes_purchase_id
   valuation_id
   status
   status_code
   created_at
   updated_at
 }
+@enduml
