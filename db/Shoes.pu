@@ -1,0 +1,22 @@
+class Shoes {
+  + ID [PK]
+  --
+  name
+  image_url
+  maker
+  status
+  accessories
+  remark
+  serial_number
+  storage_id
+  deposit_request_at
+  deposit_approval_at
+  return_request_at
+  return_approval_at
+  deal_id
+  valuation_id
+  status
+  status_code
+  created_at
+  updated_at
+}

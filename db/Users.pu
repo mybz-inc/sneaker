@@ -1,0 +1,21 @@
+class Users {
+  + ID [PK]
+  --
+  name
+  name_ruby
+  email
+  phone_number
+  birthday
+  password
+  balance
+  shoes_id
+  bank_id
+  creditcard_id
+  plan_id
+  stripe_user_id
+  sms_user_id
+  status
+  status_code
+  created_at
+  updated_at
+}

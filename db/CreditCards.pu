@@ -1,0 +1,11 @@
+class CreditCards {
+  + ID [PK]
+  --
+  brand
+  number_last4
+  stripe_user_id
+  status
+  status_code
+  created_at
+  updated_at
+}

@@ -1,0 +1,12 @@
+@startuml tables
+!include Users.pu
+!include Banks.pu
+!include CreditCards.pu
+
+companies ||-d-o{ Users
+companies ||-o{ positions
+Users ||-l-o| user_profiles
+Users ||-d-o{ user_subordinate_users
+Users ||-o{ user_positions
+positions ||-o{ user_positions
+@enduml

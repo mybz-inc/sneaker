@@ -1,0 +1,10 @@
+class Deals {
+  + ID [PK]
+  --
+  user_id
+  shoes_id
+  status
+  status_code
+  created_at
+  updated_at
+}
