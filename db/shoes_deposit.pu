@@ -8,6 +8,6 @@ entity shoes_deposit {
   updated_at : TIMESTAMP
   --
   + user_id [FK]
-  + shoes_id [FK]
+  + shoes_history_id [FK]
 }
 @enduml

@@ -15,8 +15,8 @@ entity shoes {
   updated_at : TIMESTAMP
   --
   + user_id [FK]
-  + plans_id [FK]
-  + shoes_action_id [FK]
+  + plan_id [FK]
+  + shoes_history_id [FK]
   + valuation_id [FK]
 }
 @enduml

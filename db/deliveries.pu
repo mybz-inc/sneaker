@@ -1,5 +1,5 @@
-@startuml delivery
-entity delivery {
+@startuml deliveries
+entity deliveries {
   + ID [PK]
   --
   postel

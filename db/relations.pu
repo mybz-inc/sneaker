@@ -7,28 +7,28 @@
 !include banks.pu
 !include creditcards.pu
 !include plans.pu
-!include delivery.pu
+!include deliveries.pu
 !include valuations.pu
-!include shoes_action.pu
+!include shoes_history.pu
 !include shoes_deposit.pu
 !include shoes_return.pu
 !include shoes_purchase.pu
 
-users ||-d-o{ creditcards
-users ||-u-o{ banks
-users ||-l-|| balances
-balances ||-d-o{ balances_deposit
-balances ||-u-o{ balances_withdraw
-balances_withdraw ||-r-|| banks
-balances_deposit ||-r-o{ shoes_purchase
-users ||-r-o{ shoes
-users ||-r-o{ delivery
-shoes ||-u-|| plans
-shoes ||-d-|| valuations
-shoes ||-r-o{ shoes_action
-shoes_action ||-u-o| shoes_deposit
-shoes_action ||-r-o| shoes_return
-shoes_return ||-d-|| delivery
-shoes_action ||-d-o| shoes_purchase
-shoes_purchase ||-l-|| valuations
+' users ||-d-o{ creditcards
+' users ||-u-o{ banks
+' users ||-l-|| balances
+' balances ||-d-o{ balances_deposit
+' balances ||-u-o{ balances_withdraw
+' balances_withdraw ||-r-|| banks
+' balances_deposit ||-r-o{ shoes_purchase
+' users ||-r-o{ shoes
+' users ||-r-o{ deliveries
+' shoes ||-u-|| plans
+' shoes ||-d-|| valuations
+' shoes ||-r-o{ shoes_history
+' shoes_history ||-u-o| shoes_deposit
+' shoes_history ||-r-o| shoes_return
+' shoes_return ||-d-|| deliveries
+' shoes_history ||-d-o| shoes_purchase
+' shoes_purchase ||-l-|| valuations
 @enduml

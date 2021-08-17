@@ -1,5 +1,5 @@
-@startuml shoes_action
-entity shoes_action {
+@startuml shoes_history
+entity shoes_history {
   + ID [PK]
   --
   status : BOOLEAN
@@ -8,8 +8,6 @@ entity shoes_action {
   updated_at : TIMESTAMP
   --
   + shoes_id [FK]
-  + shoes_deposit [FK]
-  + shoes_return [FK]
-  + shoes_purchase [FK]
+  + shoes_history [FK]
 }
 @enduml

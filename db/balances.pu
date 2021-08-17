@@ -2,7 +2,7 @@
 entity balances {
   + ID [PK]
   --
-  current_user_amount
+  current_amount
   status
   status_code
   created_at : TIMESTAMP

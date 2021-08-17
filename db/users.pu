@@ -4,7 +4,7 @@ entity users {
   --
   name : TEXT()
   name_ruby : TEXT()
-  email : VARCHAR(191)
+  email : VARCHAR(128)
   birthday : DATE
   password : VARCHAR(50)
   status : BOOLEAN
