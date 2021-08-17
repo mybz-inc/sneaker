@@ -1,0 +1,23 @@
+@startuml delivery
+entity delivery {
+  + ID [PK]
+  --
+  postel
+  prefecuture
+  city
+  address
+  buildings
+  phone_number
+  created_at
+  updated_at
+  status
+  status_code
+  fee
+  status : BOOLEAN
+  status_code : CHAR(20)
+  created_at : TIMESTAMP
+  updated_at : TIMESTAMP
+  --
+  + user_id [PK]
+}
+@enduml

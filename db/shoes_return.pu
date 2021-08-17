@@ -7,6 +7,8 @@ entity shoes_return {
   created_at : TIMESTAMP
   updated_at : TIMESTAMP
   --
+  + user_id [FK]
   + shoes_id [FK]
+  + delivery_id [FK]
 }
 @enduml

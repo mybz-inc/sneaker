@@ -7,6 +7,7 @@ entity shoes {
   maker
   accessories
   remark
+  release_date : DATE
   serial_number : VARCHAR(50)
   status : BOOLEAN
   status_code : CHAR(20)
@@ -14,10 +15,8 @@ entity shoes {
   updated_at : TIMESTAMP
   --
   + user_id [FK]
-  + storage_id [FK]
-  + shoes_deposit_id [FK]
-  + shoes_return_id [FK]
-  + shoes_purchase_id [FK]
+  + plans_id [FK]
+  + shoes_action_id [FK]
   + valuation_id [FK]
 }
 @enduml

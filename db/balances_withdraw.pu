@@ -1,0 +1,17 @@
+@startuml balances_withdraw
+entity balances_withdraw {
+  + ID [PK]
+  --
+  current_amount
+  withdraw_amount
+  after_amount
+  status
+  status_code
+  created_at : TIMESTAMP
+  updated_at : TIMESTAMP
+  --
+  + user_id [FK]
+  + balances_id [FK]
+  + bank_id [FK]
+}
+@enduml

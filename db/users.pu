@@ -5,10 +5,8 @@ entity users {
   name : TEXT()
   name_ruby : TEXT()
   email : VARCHAR(191)
-  phone_number : VARCHAR()
   birthday : DATE
   password : VARCHAR(50)
-  balance : INTEGER
   status : BOOLEAN
   status_code : CHAR(20)
   created_at : TIMESTAMP
@@ -17,7 +15,7 @@ entity users {
   shoes_id [FK]
   bank_id [FK]
   creditcard_id [FK]
-  plan_id [FK]
+  balances_id [FK]
   stripe_user_id [FK]
   sms_user_id [FK]
 }

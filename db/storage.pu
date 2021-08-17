@@ -1,0 +1,17 @@
+@startuml storage
+entity storage {
+  + ID [PK]
+  --
+  name
+  postel
+  country
+  prefecuture
+  city
+  address
+  phone_number
+  status
+  status_code
+  created_at : TIMESTAMP
+  updated_at : TIMESTAMP
+}
+@enduml

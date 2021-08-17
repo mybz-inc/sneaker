@@ -1,14 +1,13 @@
-@startuml creditcards
-entity creditcards {
+@startuml balances
+entity balances {
   + ID [PK]
   --
-  brand
-  number_last4
-  expiry
-  stripe_user_id
+  current_user_amount
   status
   status_code
   created_at : TIMESTAMP
   updated_at : TIMESTAMP
+  --
+  + user_id [FK]
 }
 @enduml

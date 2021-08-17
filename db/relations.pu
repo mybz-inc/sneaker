@@ -1,16 +1,34 @@
 @startuml tables
 !include users.pu
+!include balances.pu
+!include balances_deposit.pu
+!include balances_withdraw.pu
 !include shoes.pu
 !include banks.pu
 !include creditcards.pu
+!include plans.pu
+!include delivery.pu
+!include valuations.pu
+!include shoes_action.pu
 !include shoes_deposit.pu
 !include shoes_return.pu
 !include shoes_purchase.pu
 
-users ||-r-o{ creditcards
-users ||-l-o{ banks
-users ||-d-o{ shoes
-shoes ||-l-o{ shoes_deposit
-shoes ||-r-o{ shoes_return
-shoes ||-d-o{ shoes_purchase
+users ||-d-o{ creditcards
+users ||-u-o{ banks
+users ||-l-|| balances
+balances ||-d-o{ balances_deposit
+balances ||-u-o{ balances_withdraw
+balances_withdraw ||-r-|| banks
+balances_deposit ||-r-o{ shoes_purchase
+users ||-r-o{ shoes
+users ||-r-o{ delivery
+shoes ||-u-|| plans
+shoes ||-d-|| valuations
+shoes ||-r-o{ shoes_action
+shoes_action ||-u-o| shoes_deposit
+shoes_action ||-r-o| shoes_return
+shoes_return ||-d-|| delivery
+shoes_action ||-d-o| shoes_purchase
+shoes_purchase ||-l-|| valuations
 @enduml

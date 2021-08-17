@@ -1,15 +1,15 @@
-@startuml shoes_purchase
-entity shoes_purchase {
+@startuml shoes_action
+entity shoes_action {
   + ID [PK]
   --
-  deposit_amount : INTEGER
   status : BOOLEAN
   status_code : CHAR(20)
   created_at : TIMESTAMP
   updated_at : TIMESTAMP
   --
-  + user_id [FK]
   + shoes_id [FK]
-  + valuation_id [FK]
+  + shoes_deposit [FK]
+  + shoes_return [FK]
+  + shoes_purchase [FK]
 }
 @enduml

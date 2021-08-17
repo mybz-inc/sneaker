@@ -7,6 +7,7 @@ entity shoes_deposit {
   created_at : TIMESTAMP
   updated_at : TIMESTAMP
   --
+  + user_id [FK]
   + shoes_id [FK]
 }
 @enduml
