@@ -1,17 +1,16 @@
-@startuml balances_deposit
-entity balances_deposit {
+@startuml アカウント入金
+entity アカウント入金 {
   + ID [PK]
   --
-  current_amount
-  deposit_amount
-  after_amount
-  status
-  status_code
-  created_at : TIMESTAMP
-  updated_at : TIMESTAMP
+  + アカウント残高ID [FK]
+  + シューズ買取履歴ID [FK]
   --
-  + user_id [FK]
-  + balances_id [FK]
-  + shoes_purchase_id [FK]
+  残高 : INT
+  買取金額 : INT
+  合計後残高 : INT
+  ステータス : BOOLEAN
+  ステータスコード : VARCHAR(n)
+  作成日 : TIMESTAMP
+  更新日 : TIMESTAMP
 }
 @enduml

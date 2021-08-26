@@ -1,14 +1,15 @@
-@startuml shoes_return
-entity shoes_return {
+@startuml シューズ返却履歴
+entity シューズ返却履歴 {
   + ID [PK]
   --
-  status : BOOLEAN
-  status_code : CHAR()
-  created_at : TIMESTAMP
-  updated_at : TIMESTAMP
+  + ユーザーID [FK]
+  + 配送ID [FK]
+  + プランオプションID [FK]
   --
-  + user_id [FK]
-  + shoes_history_id [FK]
-  + delivery_id [FK]
+  ステータス : BOOLEAN
+  ステータスコード : VARCHAR(n)
+  発送完了日 : DATE
+  作成日(依頼日) : TIMESTAMP
+  更新日 : TIMESTAMP
 }
 @enduml

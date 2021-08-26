@@ -1,12 +1,12 @@
-@startuml valuations
-entity valuations {
+@startuml 相場
+entity 相場 {
   + ID [PK]
   --
-  status : BOOLEAN
-  status_code : CHAR(20)
-  created_at : TIMESTAMP
-  updated_at : TIMESTAMP
+  + シューズID [FK]
   --
-  + shoes_id [FK]
+  値付け日 : DATE
+  買取金額 : INT
+  作成日 : TIMESTAMP
+  更新日 : TIMESTAMP
 }
 @enduml

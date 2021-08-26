@@ -1,12 +1,12 @@
-@startuml アカウント引出
-entity アカウント引出 {
+@startuml アカウント残高
+entity アカウント残高 {
   + ID [PK]
   --
-  + アカウント残高ID [FK]
+  + ユーザーID [FK]
+  + アカウント引出ID [FK]
+  + アカウント入金ID [FK]
   --
   残高 : INT
-  引出金額 : INT
-  差引後残高 : INT
   ステータス : BOOLEAN
   ステータスコード : VARCHAR(n)
   作成日 : TIMESTAMP

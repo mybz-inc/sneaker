@@ -1,12 +1,16 @@
-@startuml banks
-entity banks {
+@startuml 銀行
+entity 銀行 {
   + ID [PK]
   --
-  name
-  name_branch
-  type
-  number
-  created_at : TIMESTAMP
-  updated_at : TIMESTAMP
+  ユーザーID [FK]
+  --
+  銀行名 : TEXT
+  支店名 : TEXT
+  種別 : VARCHAR(n)
+  口座番号 : INT
+  ステータス : BOOLEAN
+  ステータスコード : VARCHAR(n)
+  作成日 : TIMESTAMP
+  更新日 : TIMESTAMP
 }
 @enduml

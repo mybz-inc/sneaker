@@ -1,22 +1,23 @@
-@startuml shoes
-entity shoes {
+@startuml シューズ
+entity シューズ {
   + ID [PK]
   --
-  name
-  image_url_xx
-  maker
-  accessories
-  remark
-  release_date : DATE
-  serial_number : VARCHAR(50)
-  status : BOOLEAN
-  status_code : CHAR(20)
-  created_at : TIMESTAMP
-  updated_at : TIMESTAMP
+  + ユーザーID [FK]
+  + プランID [FK]
+  + シューズ履歴ID [FK]
+  + 相場ID [FK]
   --
-  + user_id [FK]
-  + plan_id [FK]
-  + shoes_history_id [FK]
-  + valuation_id [FK]
+  シューズ名 : TEXT
+  動画URL : VARCHAR(n)
+  画像URL : VARCHAR(n)
+  シューズメーカー : VARCHAR(n)
+  付属品 : BOOLEAN
+  シューズ備考 : TEXT
+  発売日 : INT
+  製造番号 : VARCHAR(n)
+  ステータス : BOOLEAN
+  ステータスコード : VARCHAR(n)
+  作成日 : TIMESTAMP
+  更新日 : TIMESTAMP
 }
 @enduml

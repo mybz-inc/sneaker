@@ -1,12 +1,13 @@
 @startuml tables
 !include users.pu
-!include balances.pu
+!include balances_history.pu
 !include balances_deposit.pu
 !include balances_withdraw.pu
 !include shoes.pu
 !include banks.pu
 !include creditcards.pu
 !include plans.pu
+!include plan_options.pu
 !include deliveries.pu
 !include valuations.pu
 !include shoes_history.pu
@@ -14,21 +15,23 @@
 !include shoes_return.pu
 !include shoes_purchase.pu
 
-' users ||-d-o{ creditcards
-' users ||-u-o{ banks
-' users ||-l-|| balances
-' balances ||-d-o{ balances_deposit
-' balances ||-u-o{ balances_withdraw
+ユーザー ||-d-o{ クレジットカード
+ユーザー ||-u-o{ 銀行
+ユーザー ||-l-o{ アカウント残高
+アカウント残高 ||-d-o{ アカウント入金
+アカウント残高 ||-u-o{ アカウント引出
 ' balances_withdraw ||-r-|| banks
-' balances_deposit ||-r-o{ shoes_purchase
-' users ||-r-o{ shoes
-' users ||-r-o{ deliveries
-' shoes ||-u-|| plans
-' shoes ||-d-|| valuations
-' shoes ||-r-o{ shoes_history
-' shoes_history ||-u-o| shoes_deposit
-' shoes_history ||-r-o| shoes_return
-' shoes_return ||-d-|| deliveries
-' shoes_history ||-d-o| shoes_purchase
-' shoes_purchase ||-l-|| valuations
+アカウント入金 ||-r-o{ シューズ買取履歴
+ユーザー ||-r-o{ シューズ
+ユーザー ||-r-o{ 配送先
+シューズ ||-u-|| プラン
+プラン ||-u-|| プランオプション
+シューズ ||-d-o| 相場
+シューズ ||-r-o{ シューズ履歴
+シューズ履歴 ||-u-o{ シューズ預入履歴
+シューズ履歴 ||-r-o{ シューズ返却履歴
+シューズ返却履歴 ||-u-|| プランオプション
+シューズ返却履歴 ||-d-|| 配送先
+シューズ履歴 ||-d-o{ シューズ買取履歴
+シューズ買取履歴 ||-l-|| 相場
 @enduml

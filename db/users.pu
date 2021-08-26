@@ -1,22 +1,21 @@
-@startuml users
-entity users {
+@startuml ユーザー
+entity ユーザー {
   + ID [PK]
   --
-  name : TEXT()
-  name_ruby : TEXT()
-  email : VARCHAR(128)
-  birthday : DATE
-  password : VARCHAR(50)
-  status : BOOLEAN
-  status_code : CHAR(20)
-  created_at : TIMESTAMP
-  updated_at : TIMESTAMP
+  シューズID [FK]
+  銀行ID [FK]
+  クレジットカードID [FK]
+  残高ID [FK]
   --
-  shoes_id [FK]
-  bank_id [FK]
-  creditcard_id [FK]
-  balances_id [FK]
-  stripe_user_id [FK]
-  sms_user_id [FK]
+  ユーザー名 : TEXT
+  ユーザー名フリガナ : TEXT
+  メールアドレス : VARCHAR(n)
+  電話番号 : VARCHAR(n)
+  生年月日 : DATE
+  パスワード : VARCHAR(n)
+  ステータス : BOOLEAN
+  ステータスコード : VARCHAR(n)
+  作成日 : TIMESTAMP
+  更新日 : TIMESTAMP
 }
 @enduml

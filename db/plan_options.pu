@@ -1,0 +1,15 @@
+@startuml プランオプション
+entity プランオプション {
+  + ID [PK]
+  --
+  プランID [FK]
+  --
+  オプション名 : TEXT
+  オプション金額 : INT
+  支払種類 : VARCHAR(n)
+  ステータス : BOOLEAN
+  ステータスコード : VARCHAR(n)
+  作成日 : TIMESTAMP
+  更新日 : TIMESTAMP
+}
+@enduml

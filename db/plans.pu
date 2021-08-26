@@ -1,12 +1,18 @@
-@startuml plans
-entity plans {
+@startuml プラン
+entity プラン {
   + ID [PK]
   --
-  name
-  price
-  status
-  status_code
-  created_at : TIMESTAMP
-  updated_at : TIMESTAMP
+  シューズID [FK]
+  プランオプションID [FK]
+  --
+  プラン名 : TEXT
+  プラン金額 : INT
+  プラン内容01 : TEXT
+  プラン内容02 : TEXT
+  プラン内容03 : TEXT
+  ステータス : BOOLEAN
+  ステータスコード : VARCHAR(n)
+  作成日 : TIMESTAMP
+  更新日 : TIMESTAMP
 }
 @enduml

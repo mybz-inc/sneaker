@@ -1,13 +1,15 @@
-@startuml shoes_history
-entity shoes_history {
+@startuml シューズ履歴
+entity シューズ履歴 {
   + ID [PK]
   --
-  status : BOOLEAN
-  status_code : CHAR(20)
-  created_at : TIMESTAMP
-  updated_at : TIMESTAMP
+  + シューズID [FK]
+  + シューズ預入ID [FK]
+  + シューズ引出ID [FK]
+  + シューズ返却ID [FK]
   --
-  + shoes_id [FK]
-  + shoes_history [FK]
+  ステータス : BOOLEAN
+  ステータスコード : VARCHAR(n)
+  作成日 : TIMESTAMP
+  更新日 : TIMESTAMP
 }
 @enduml

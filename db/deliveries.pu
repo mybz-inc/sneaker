@@ -1,23 +1,19 @@
-@startuml deliveries
-entity deliveries {
+@startuml 配送先
+entity 配送先 {
   + ID [PK]
   --
-  postel
-  prefecuture
-  city
-  address
-  buildings
-  phone_number
-  created_at
-  updated_at
-  status
-  status_code
-  fee
-  status : BOOLEAN
-  status_code : CHAR(20)
-  created_at : TIMESTAMP
-  updated_at : TIMESTAMP
+  + ユーザーID [PK]
   --
-  + user_id [PK]
+  郵便番号 : VARCHAR(n)
+  都道府県 : VARCHAR(n)
+  市区町村 : VARCHAR(n)
+  番地 : VARCHAR(n)
+  建物・ビル名 : VARCHAR(n)
+  電話番号 : VARCHAR(n)
+  配送料金 : INT
+  ステータス : BOOLEAN
+  ステータスコード : VARCHAR(n)
+  作成日 : TIMESTAMP
+  更新日 : TIMESTAMP
 }
 @enduml

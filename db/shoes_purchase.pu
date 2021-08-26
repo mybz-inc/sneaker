@@ -1,15 +1,14 @@
-@startuml shoes_purchase
-entity shoes_purchase {
+@startuml シューズ買取履歴
+entity シューズ買取履歴 {
   + ID [PK]
   --
-  deposit_amount : INTEGER
-  status : BOOLEAN
-  status_code : CHAR(20)
-  created_at : TIMESTAMP
-  updated_at : TIMESTAMP
+  + シューズ履歴ID [FK]
+  + 相場ID [FK]
   --
-  + user_id [FK]
-  + shoes_history_id [FK]
-  + valuation_id [FK]
+  売却金額(買取金額) : INT
+  ステータス : BOOLEAN
+  ステータスコード : VARCHAR(n)
+  作成日 : TIMESTAMP
+  更新日 : TIMESTAMP
 }
 @enduml

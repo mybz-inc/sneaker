@@ -1,13 +1,13 @@
-@startuml shoes_deposit
-entity shoes_deposit {
+@startuml シューズ預入履歴
+entity シューズ預入履歴 {
   + ID [PK]
   --
-  status : BOOLEAN
-  status_code : CHAR(20)
-  created_at : TIMESTAMP
-  updated_at : TIMESTAMP
+  + シューズ履歴ID [FK]
   --
-  + user_id [FK]
-  + shoes_history_id [FK]
+  ステータス : BOOLEAN
+  ステータスコード : VARCHAR(n)
+  確認完了日 : DATE
+  作成日(依頼日) : TIMESTAMP
+  更新日 : TIMESTAMP
 }
 @enduml
